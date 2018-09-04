@@ -4,7 +4,7 @@ import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
 
 import { DxDataGridModule } from "devextreme-angular";
 
-import { Service, FormMetadata } from "./app.service";
+import { Service, Respondent } from "./app.service";
 
 @Component({
   selector: "demo-app",
