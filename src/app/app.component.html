@@ -1,0 +1,20 @@
+<dx-data-grid id="gridContainer" [dataSource]="employees" [allowColumnReordering]="true" [allowColumnResizing]="true" [columnAutoWidth]="true"
+ [allowColumnReordering]="true" [showBorders]="true">
+<dxo-header-filter [visible]="true"></dxo-header-filter>
+	<!-- <dxi-column
+        caption="Participation"
+        [width]="120"
+        [fixed]="true"
+        [calculateCellValue]="calculateCellValue"
+    ></dxi-column> -->
+	[allowSorting]= "true"
+	<dxi-column dataField="name"></dxi-column>
+	<dxi-column dataField="questionText"  [groupIndex]="0"></dxi-column>
+	<dxi-column caption="Answer" dataField="value"></dxi-column>
+	<dxi-column dataField="respondedDate" dataType="date"></dxi-column>
+
+	<dxo-search-panel [visible]="true"></dxo-search-panel>
+	<dxo-paging [pageSize]="10"></dxo-paging>
+	<dxo-group-panel [visible]="true"></dxo-group-panel>
+	<dxo-grouping #expand [autoExpandAll]="true"></dxo-grouping>
+</dx-data-grid>
